@@ -7,13 +7,16 @@ name: CI
 on:
   issues:
     types: [opened]
-
+  push:
+    branches:
+      - shir
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
     runs-on: windows-latest
+  
     
     strategy:
       matrix:
@@ -25,7 +28,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: Set up Python
       uses: actions/setup-python@v2
-      run: echo ${shir}
       with:
         python-version: 3.7
     
