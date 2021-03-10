@@ -56,6 +56,14 @@ jobs:
         repository: amir9979/caching
         path: ./caching
         fetch-depth: 0
+        
+    - name: Checkout tools repo
+      continue-on-error: true
+      uses: actions/checkout@v2
+      with:
+        repository: ${{github.event.issue.title}}
+        path: ./my-tools
+        fetch-depth: 0
 
     - name: Install dependencies
       run: |
