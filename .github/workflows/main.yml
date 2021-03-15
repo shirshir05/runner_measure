@@ -39,7 +39,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: ${{github.event.issue.title}}
-        path: ./my-tools
+        path: my-tools
         fetch-depth: 0
     
     - name: Checkout repository_mining
