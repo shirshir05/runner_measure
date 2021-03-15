@@ -98,7 +98,7 @@ jobs:
       shell: python
       run: |
             import git
-            repo = git.Repo('/')
+            repo = git.Repo('./${{github.event.issue.title}}')
       
     - name: execute
       run: python main_shir.py ${{ matrix.commit_ind }} ${{github.event.issue.title}} ${{github.event.issue.body}}
