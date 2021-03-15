@@ -93,7 +93,13 @@ jobs:
 
     - name: ls
       run: ls -R
-
+      
+    - name: before
+      shell: python
+      run: |
+            import git
+            repo = git.Repo('my-tools')
+      
     - name: execute
       run: python main_shir.py ${{ matrix.commit_ind }} ${{github.event.issue.title}} ${{github.event.issue.body}}
 
