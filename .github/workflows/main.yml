@@ -45,8 +45,11 @@ jobs:
     - name: fetch  
       continue-on-error: true
       run: git fetch
-      working-directory: ./${{github.event.issue.title}}
-    
+      working-directory: ./my-tools
+  
+    - name: ls
+      run: ls -R
+        
     - name: Checkout repository_mining
       uses: actions/checkout@v2
       with:
