@@ -97,7 +97,10 @@ jobs:
       run: ls -R
       
     - name: execute
-      run: python main_shir.py ${{ matrix.commit_ind }} ${{github.event.issue.title}} ${{github.event.issue.body}}
+      run: python main_shir.py ${{ matrix.commit_ind }} 30
+
+    - name: ls files
+      run: ls -R
 
     - name: Upload repository_data
       if: ${{ always() }}
