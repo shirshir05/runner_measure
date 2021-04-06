@@ -96,7 +96,7 @@ jobs:
       run: ls -R
       
     - name: execute
-      run: python main_shir.py ${{ matrix.commit_ind }} 500
+      run: python main_shir.py ${{ matrix.commit_ind }} 300
 
     - name: ls files
       run: ls -R
