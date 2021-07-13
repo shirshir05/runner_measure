@@ -82,6 +82,7 @@ jobs:
         pip install python-bugzilla
         pip install psutil
         pip install -r requirements.txt
+        pip install lizard
     - name: javadiff_install
       run: python ./javadiff/setup.py install
 
