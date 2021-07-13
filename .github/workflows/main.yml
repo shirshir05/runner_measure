@@ -83,6 +83,7 @@ jobs:
         pip install psutil
         pip install -r requirements.txt
         pip install lizard
+        pip  install jsons
     - name: javadiff_install
       run: python ./javadiff/setup.py install
 
