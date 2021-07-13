@@ -40,7 +40,6 @@ jobs:
         repository: amir9979/repository_mining
         path: .
         fetch-depth: 0
-        ref: shir
     
     - name: Checkout javadiff
       uses: actions/checkout@v2
